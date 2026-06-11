@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Invito ufficiale al 18esimo compleanno di Tave - Una serata indimenticabile presso The WooD il 26 giugno 2026." />
+  <meta property="og:title" content="18esimo Tave" />
+  <meta property="og:description" content="Sei invitato al mio 18esimo! Una serata indimenticabile il 26 giugno 2026." />
+  <meta property="og:type" content="website" />
+  <title>18esimo Tave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLES BACKGROUND ===== -->
+  <div id="particles-container" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principale">
+    <div class="nav-brand">
+      <span class="nav-logo">✦</span>
+      <span class="nav-title">18esimo Tave</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link" id="nav-home">Home</a>
+      <a href="#dettagli" class="nav-link" id="nav-details">Dettagli</a>
+      <a href="#pass" class="nav-link nav-cta" id="nav-pass">Il tuo Pass</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / HOME ===== -->
+  <section id="home" class="hero-section" aria-label="Pagina iniziale">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-text">Sei Invitato</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-number">18<span class="hero-superscript">esimo</span></span>
+        <span class="hero-title-name">Tave</span>
+      </h1>
+      <div class="hero-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-diamond">◆</span>
+        <span class="divider-line"></span>
+      </div>
+      <p class="hero-subtitle">
+        Il momento è arrivato. Una serata speciale si avvicina<br />
+        e non potevo immaginarla senza di te.
+      </p>
+      <p class="hero-invitation">
+        Ti invito a festeggiare con me uno dei traguardi più importanti della mia vita.<br />
+        Preparati per una notte di musica, brindisi e ricordi indimenticabili.
+      </p>
+      <a href="#dettagli" class="btn btn-primary hero-btn" id="btn-scopri-dettagli" aria-label="Vai alla sezione dettagli festa">
+        <span class="btn-text">Scopri i Dettagli della Festa</span>
+        <span class="btn-icon">↓</span>
+      </a>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===== DETTAGLI FESTA ===== -->
+  <section id="dettagli" class="details-section hidden-section" aria-label="Dettagli della festa">
+    <div class="section-header">
+      <div class="section-badge">La Serata</div>
+      <h2 class="section-title">Dettagli della Festa</h2>
+      <p class="section-subtitle">Tutto quello che devi sapere per la notte più bella dell'anno</p>
+    </div>
+
+    <div class="details-grid">
+
+      <!-- Location Card -->
+      <div class="detail-card card-location" id="card-location">
+        <div class="card-icon">📍</div>
+        <h3 class="card-title">Location</h3>
+        <div class="card-content">
+          <p class="location-name">The WooD</p>
+          <p class="location-address">📍 Via Gerenzano 61, Castellanza (VA)</p>
+          <p class="location-tagline">Organizza il tuo evento indimenticabile nella nostra location esclusiva</p>
+          <a href="https://thewoodlocation.com" target="_blank" rel="noopener noreferrer" class="location-link" id="link-thewood" aria-label="Visita il sito di The WooD (apre nuova finestra)">
+            🌐 thewoodlocation.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Data & Ora Card -->
+      <div class="detail-card card-datetime" id="card-datetime">
+        <div class="card-icon">🗓️</div>
+        <h3 class="card-title">Data & Orario</h3>
+        <div class="card-content">
+          <div class="datetime-display">
+            <div class="date-block">
+              <span class="date-day">26</span>
+              <span class="date-month">GIUGNO</span>
+              <span class="date-year">2026</span>
+            </div>
+          </div>
+          <div class="time-block">
+            <span class="time-label">Dalle</span>
+            <span class="time-value">21:00</span>
+            <span class="time-separator">–</span>
+            <span class="time-label">alle</span>
+            <span class="time-value">02:00</span>
+          </div>
+          <div class="countdown-container" id="countdown" aria-label="Conto alla rovescia">
+            <div class="countdown-item"><span class="countdown-num" id="cd-days">--</span><span class="countdown-label">giorni</span></div>
+            <div class="countdown-item"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-label">ore</span></div>
+            <div class="countdown-item"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-label">minuti</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink Card -->
+      <div class="detail-card card-drinks" id="card-drinks">
+        <div class="card-icon">🥂</div>
+        <h3 class="card-title">Open Bar</h3>
+        <div class="card-content">
+          <div class="drinks-included">
+            <p class="drinks-highlight">✅ Analcolici <strong>illimitati</strong></p>
+            <p class="drinks-highlight">🍸 <strong>2 drink alcolici</strong> inclusi nel pass</p>
+          </div>
+          <div class="drinks-token-box">
+            <p class="token-title">🎟️ Token Festeggiato</p>
+            <p class="token-desc">Il festeggiato potrà distribuire <strong>drink token aggiuntivi</strong> agli ospiti più meritevoli della serata, la scelta spetta a lui!</p>
+          </div>
+          <div class="drinks-list-soon">
+            <p class="drinks-coming">📋 Menu cocktail</p>
+            <p class="drinks-coming-sub">La lista dei drink sarà svelata presto...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cibo Card -->
+      <div class="detail-card card-food" id="card-food">
+        <div class="card-icon">🍕</div>
+        <h3 class="card-title">Buffet</h3>
+        <div class="card-content">
+          <p class="food-desc">Un ricco buffet vi aspetta durante la serata:</p>
+          <ul class="food-list" aria-label="Lista cibo disponibile">
+            <li class="food-item"><span class="food-emoji">🥖</span> <span>Panini</span></li>
+            <li class="food-item"><span class="food-emoji">🫓</span> <span>Focaccine</span></li>
+            <li class="food-item"><span class="food-emoji">🍕</span> <span>Pizzette</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dress Code Card -->
+      <div class="detail-card card-dresscode" id="card-dresscode">
+        <div class="card-icon">👔</div>
+        <h3 class="card-title">Dress Code</h3>
+        <div class="card-content">
+          <p class="dresscode-main">Elegante</p>
+          <p class="dresscode-desc">Venite vestiti come siete più a vostro agio ma adatti ad una festa <small>(senza esagerare)</small>.
+            <br /> Il look è importante, ma non dimenticate di divertirvi!</p>
+        </div>
+      </div>
+
+      <!-- Mappa Card (full width) -->
+      <div class="detail-card card-map" id="card-map">
+        <div class="card-icon">🗺️</div>
+        <h3 class="card-title">Come Arrivare</h3>
+        <div class="card-content">
+          <p class="map-location-name">The WooD — Location Esclusiva</p>
+          <div class="map-container" role="region" aria-label="Mappa della location The WooD">
+            <iframe
+              id="map-iframe"
+              src="https://maps.google.com/maps?q=Via%20Gerenzano%2061,%20Castellanza%20VA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="350"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa The WooD location"
+              aria-label="Mappa interattiva della location The WooD"
+            ></iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/The+WooD+location+eventi" target="_blank" rel="noopener noreferrer" class="map-link" id="link-maps" aria-label="Apri in Google Maps (apre nuova finestra)">
+            📍 Apri in Google Maps
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /details-grid -->
+
+    <!-- CTA Pass Button -->
+    <div class="pass-cta-wrapper">
+      <div class="pass-cta-text">Hai letto tutto? È ora di ufficializzare la tua presenza.</div>
+      <a href="#pass" class="btn btn-primary btn-large" id="btn-ottieni-pass" aria-label="Vai alla sezione per ottenere il tuo pass">
+        <span class="btn-text">🎟️ Ottieni il tuo Pass per la Festa</span>
+        <span class="btn-icon">→</span>
+      </a>
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-logo">✦</div>
+        <p class="footer-title">18esimo Tave</p>
+        <p class="footer-date">26 Giugno 2026 · The WooD</p>
+        <p class="footer-note">Con amore e attesa 💙</p>
+      </div>
+    </footer>
+
+  </section>
+
+  <!-- ===== SEZIONE PASS ===== -->
+  <section id="pass" class="pass-section hidden-section" aria-label="Sezione pass per la festa">
+    <div class="section-header">
+      <div class="section-badge">Accesso VIP</div>
+      <h2 class="section-title">Il tuo Pass Personale</h2>
+      <p class="section-subtitle">Per accedere alla festa avrai bisogno del tuo QR Code personale</p>
+    </div>
+
+    <!-- Step 1: Domanda segreta -->
+    <div class="pass-step" id="step-question" aria-live="polite">
+      <div class="pass-card">
+        <div class="pass-step-number">01</div>
+        <h3 class="pass-step-title">🔐 Verifica della conoscenza</h3>
+        <p class="pass-step-desc">
+          <span class="question-mark">❓</span>
+          Prima di procedere, dimostra quanto conosci davvero il festeggiato completando il quiz<small>(Non siamo a scuola puoi pure copiare la risposta dagli altri invitati)</small>:<br />
+          <a href="https://kahoot.it/challenge/06395818?challenge-id=f229ca9e-a149-4f83-8564-bdff1801dc57_1781181702382" target="_blank">
+            <i class="fas fa-external-link-alt">Clicca qui per fare il quiz</i> 
+          </a>
+          <div style="margin-top: 24px; text-align: center;">
+            <button type="button" class="btn btn-primary" id="btn-go-to-form" aria-label="Procedi al form di registrazione per il pass">
+              Ottieni il tuo pass →
+            </button>
+          </div>
+        </p>
+        <p class="question-hint" id="question-hint">
+          💬 Collabora con gli altri invitati per scoprire la soluzione
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2: Form registrazione (nascosto inizialmente) -->
+    <div class="pass-step hidden" id="step-form" aria-live="polite">
+      <button type="button" class="btn btn-back" id="btn-back-to-question" aria-label="Torna al quiz">← Indietro</button>
+      <div class="pass-card">
+        <div class="pass-step-number">02</div>
+        <h3 class="pass-step-title">📝 Il tuo Pass</h3>
+        <p class="pass-step-desc">Compila il form per generare il tuo pass personalizzato.</p>
+
+        <div class="coming-soon-banner" id="coming-soon-banner" role="status" aria-live="polite">
+          <div class="coming-soon-icon">🚧</div>
+          <h4 class="coming-soon-title">I Pass sono in arrivo!</h4>
+          <p class="coming-soon-text">
+            I QR Code personalizzati non sono ancora stati generati. Stai tranquillo, il festeggiato sta lavorando per prepararli in tempo — ricontrolla tra poco!
+          </p>
+        </div>
+
+        <form class="registration-form" id="registration-form" novalidate aria-label="Form di registrazione per il pass">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-nome" class="form-label">Nome <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="input-nome" name="nome" class="form-input" placeholder="Il tuo nome" required autocomplete="given-name" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="input-cognome" class="form-label">Cognome <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="input-cognome" name="cognome" class="form-input" placeholder="Il tuo cognome" required autocomplete="family-name" aria-required="true" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-datanascita" class="form-label">Data di Nascita <span class="required" aria-hidden="true">*</span></label>
+              <input type="date" id="input-datanascita" name="datanascita" class="form-input" required autocomplete="bday" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="input-email" class="form-label">Email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="input-email" name="email" class="form-input" placeholder="la.tua@email.com" required autocomplete="email" aria-required="true" />
+            </div>
+          </div>
+          <p class="form-privacy-note" aria-label="Nota sulla privacy">🔒 <em>Tranquillo, non vendiamo i tuoi dati. Probabilmente.</em></p>
+          <button type="submit" class="btn btn-primary btn-full" id="btn-submit-form" aria-label="Invia il modulo e ottieni il tuo pass">
+            <span class="btn-text">Genera il mio Pass 🎟️</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Step 3: QR Code (nascosto inizialmente) -->
+    <div class="pass-step hidden" id="step-qr" aria-live="polite">
+      <button type="button" class="btn btn-back" id="btn-back-to-form" aria-label="Torna al form">← Indietro</button>
+      <div class="pass-card pass-card-qr">
+        <div class="pass-step-number">03</div>
+        <h3 class="pass-step-title">🎟️ Il tuo Pass è Pronto!</h3>
+        <p class="pass-step-desc" id="qr-welcome-text">Benvenuto! Ecco il tuo QR Code personale.</p>
+
+        <div class="qr-display" id="qr-display">
+          <div class="qr-frame">
+            <img id="qr-image" src="" alt="Il tuo QR Code personale per accedere alla festa" class="qr-img" />
+          </div>
+          <p class="qr-name" id="qr-name"></p>
+          <p class="qr-instruction">📱 Mostra questo QR Code all'ingresso per accedere alla festa</p>
+        </div>
+
+        <div class="qr-not-found hidden" id="qr-not-found" role="alert">
+          <div class="not-found-icon">🔍</div>
+          <h4 class="not-found-title">Pass non ancora disponibile</h4>
+          <p class="not-found-text">Il tuo QR Code personalizzato non è ancora stato preparato. Riprova più tardi o contatta direttamente il festeggiato!</p>
+        </div>
+
+        <div class="qr-actions" id="qr-actions">
+          <a id="btn-download-qr" class="btn btn-primary btn-download" download aria-label="Scarica il tuo QR Code — dovrai esibirlo all'ingresso della festa">
+            <span class="btn-text">⬇️ Scarica il QR Code</span>
+            <span class="btn-sub">Da esibire all'ingresso per entrare alla festa</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-logo">✦</div>
+        <p class="footer-title">18esimo Tave</p>
+        <p class="footer-date">26 Giugno 2026 · The WooD</p>
+        <p class="footer-note">Con affetto e attesa 💙</p>
+      </div>
+    </footer>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
