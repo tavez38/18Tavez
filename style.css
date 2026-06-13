@@ -533,6 +533,10 @@ section {
   grid-column: 1 / -1;
 }
 
+.card-drinks {
+  grid-row: span 2;
+}
+
 .card-icon {
   font-size: 36px;
   margin-bottom: 16px;
@@ -720,26 +724,110 @@ section {
   line-height: 1.6;
 }
 
-.drinks-list-soon {
-  text-align: center;
-  padding: 12px;
-  background: var(--white-05);
-  border-radius: var(--radius-sm);
-  border: 1px dashed var(--glass-border);
-}
-
-.drinks-coming {
-  font-weight: 600;
-  color: var(--white-70);
-  font-size: 13px;
-}
-
-.drinks-coming-sub {
-  font-size: 12px;
-  color: var(--white-50);
-  font-style: italic;
+/* Cocktail Menu */
+.cocktail-menu {
   margin-top: 4px;
 }
+
+.cocktail-menu-title {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--azure);
+  margin-bottom: 6px;
+}
+
+.cocktail-menu-hint {
+  font-size: 11px;
+  color: var(--white-50);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.cocktail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cocktail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  background: var(--white-05);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  cursor: default;
+  transition: var(--transition);
+  position: relative;
+  overflow: visible;
+}
+
+.cocktail-item:hover,
+.cocktail-item:focus-visible {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.35);
+  border-left: 3px solid var(--azure);
+  outline: none;
+}
+
+.cocktail-emoji {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cocktail-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white-90);
+  flex: 1;
+}
+
+.cocktail-arrow {
+  font-size: 18px;
+  color: var(--white-50);
+  transition: var(--transition);
+}
+
+.cocktail-item:hover .cocktail-arrow,
+.cocktail-item:focus-visible .cocktail-arrow {
+  color: var(--azure);
+  transform: rotate(90deg);
+}
+
+/* Tooltip — reads from data-ingredients attribute */
+.cocktail-item::after {
+  content: attr(data-ingredients);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: linear-gradient(135deg, rgba(15, 38, 96, 0.98), rgba(13, 26, 53, 0.98));
+  color: var(--azure-light);
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
+  padding: 8px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cocktail-item:hover::after,
+.cocktail-item:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
 
 /* Food */
 .food-desc {
@@ -1287,6 +1375,10 @@ section {
 
   .card-map {
     grid-column: 1;
+  }
+
+  .card-drinks {
+    grid-row: auto;
   }
 
   .detail-card {
